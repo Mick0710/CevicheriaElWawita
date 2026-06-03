@@ -1,0 +1,480 @@
+/* ==========================================================================
+   Variables de Diseño y Reset
+   ========================================================================== */
+:root {
+    --primary-blue: #0A2540;      /* Azul marino profundo */
+    --accent-gold: #FFC107;       /* Amarillo causa / Ají */
+    --accent-orange: #FF9800;     /* Toque de fuego/pasión */
+    --accent-green: #00E676;      /* Color distintivo para el delivery original */
+    --wawita-teal: #00838F;       /* Azul/Verde agua temático marino para WhatsApp */
+    --light-bg: #F4F7F9;          /* Fondo suave e higiénico */
+    --white: #FFFFFF;
+    --text-dark: #2D3748;
+    --text-light: #718096;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   Header y Navegación
+   ========================================================================== */
+.header {
+    background-color: rgba(10, 37, 64, 0.95);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.logo-name {
+    background: linear-gradient(45deg, var(--white) 60%, var(--accent-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--accent-gold);
+}
+
+/* Botón de delivery convertido en enlace interactivo */
+.delivery-badge {
+    background-color: rgba(0, 230, 118, 0.2);
+    color: var(--accent-green);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-left: 25px;
+    border: 1px solid rgba(0, 230, 118, 0.3);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.delivery-badge:hover {
+    background-color: var(--accent-green);
+    color: var(--primary-blue) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 230, 118, 0.4);
+}
+
+/* ==========================================================================
+   Sección Hero (Banner Principal)
+   ========================================================================== */
+.hero {
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(10, 37, 64, 0.95), rgba(26, 75, 112, 0.85)), 
+                url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-orange);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.6);
+}
+
+/* ==========================================================================
+   Sección de Menú con Efecto 3D Flip
+   ========================================================================== */
+.menu-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 50px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-gold);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    perspective: 1000px;
+}
+
+.flip-card {
+    background-color: transparent;
+    height: 440px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: var(--transition);
+    transform-style: preserve-3d;
+}
+
+/* El giro se activa al acercar el cursor */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cara Frontal */
+.flip-card-front {
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+.card-img-placeholder {
+    height: 200px;
+    background: linear-gradient(45deg, #e2e8f0, #cbd5e1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.card-body {
+    padding: 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 200px);
+    justify-content: space-between;
+}
+
+.card-body h3 {
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
+
+.card-body p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.card-footer-front {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--accent-orange);
+}
+
+.btn-detail {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    background-color: rgba(10, 37, 64, 0.08);
+    padding: 8px 14px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Cara Trasera - Optimizada con imagen referencial oscurecida para legibilidad */
+.flip-card-back {
+    transform: rotateY(180deg);
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.back-content {
+    position: relative;
+    z-index: 2; /* Se posiciona sobre las imágenes oscurecidas */
+    text-align: center;
+}
+
+.back-content h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.back-content p {
+    font-size: 1rem;
+    color: var(--white);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    font-weight: 600;
+}
+
+.price-back {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    border: 2px solid var(--accent-gold);
+    padding: 5px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    background-color: rgba(10, 37, 64, 0.6);
+}
+
+/* ==========================================================================
+   Footer (Pie de Página)
+   ========================================================================== */
+.footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.motivation-phrase {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   Botón de WhatsApp Marino y Animación de Ondas (Emanación)
+   ========================================================================== */
+.whatsapp-wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    z-index: 1000;
+}
+
+.whatsapp-btn {
+    background-color: var(--wawita-teal); /* Color aguamarina temático de la cevicheria */
+    color: var(--white);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 4px 15px rgba(0, 131, 143, 0.4);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 5;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Efecto de ondas de agua al acercar el cursor */
+.pulse-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--wawita-teal);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Las ondas se activan solo al hacer HOVER sobre el contenedor */
+.whatsapp-wrapper:hover .pulse-wave {
+    animation: marineWave 1.6s infinite linear;
+}
+
+.whatsapp-wrapper:hover .whatsapp-btn {
+    transform: scale(1.05);
+    background-color: #006064; /* Un tono más oscuro al posarse */
+}
+
+/* Segunda onda desfasada para dar mayor fluidez */
+.whatsapp-wrapper:hover .wave-2 {
+    animation-delay: 0.8s;
+}
+
+@keyframes marineWave {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+/* ==========================================================================
+   Responsividad Básica
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .header-flex {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .nav a {
+        margin: 0;
+    }
+    .delivery-badge {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    .flip-card {
+        height: 460px;
+    }
+    /* En móviles las ondas emanarán de forma automática para llamar la atención táctil */
+    .pulse-wave {
+        animation: marineWave 2s infinite linear;
+    }
+    .wave-2 {
+        animation-delay: 1s;
+    }
+}
