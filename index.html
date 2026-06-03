@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CevicheriaElWawita - Sabor Marino y Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-flex">
+            <div class="logo">
+                <span class="logo-name">CevicheriaElWawita</span>
+            </div>
+            <nav class="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#menu">Nuestro Menú</a>
+                <a href="https://wa.me/51123456789?text=¡Hola!%20Me%20gustaría%20hacer%20un%20pedido%20a%20delivery." class="delivery-badge" target="_blank">
+                    <i class="fas fa-motorcycle"></i> ¡Contamos con Delivery!
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>La Fusión Perfecta del Mar y la Tierra</h1>
+            <p>Descubre el auténtico sabor peruano con el toque único de <strong>CevicheriaElWawita</strong>. ¡Frescura garantizada directo a tu mesa con nuestro servicio de delivery!</p>
+            <a href="https://wa.me/51123456789?text=¡Hola!%20Me%20gustaría%20hacer%20un%20pedido%20a%20delivery." class="btn-primary" target="_blank">Pide por Delivery</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section container">
+        <h2 class="section-title">Nuestras Especialidades</h2>
+        <p class="section-subtitle">Pasa el cursor sobre las tarjetas para descubrir el secreto de su sabor</p>
+        
+        <div class="menu-grid">
+            
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card-img-placeholder">🐟</div>
+                        <div class="card-body">
+                            <h3>Ceviche Clásico</h3>
+                            <p>Pesca del día en cubos, marinado en limón del norte, cebolla roja y ají limo.</p>
+                            <div class="card-footer-front">
+                                <span class="price">S/ 10.00</span>
+                                <span class="btn-detail">Ver Detalle <i class="fas fa-sync-alt"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card-back" style="background-image: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url('https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=600');">
+                        <div class="back-content">
+                            <h3>Detalle del Chef</h3>
+                            <p>Preparado al momento con el balance perfecto de acidez. Acompañado de camote glaseado, choclo desgranado y canchita serrana crocante.</p>
+                            <span class="price-back">S/ 10.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card-img-placeholder">🥔</div>
+                        <div class="card-body">
+                            <h3>Causa Acevichada</h3>
+                            <p>Masa de papa amarilla al toque de ají amarillo, rellena de palta y ceviche suave.</p>
+                            <div class="card-footer-front">
+                                <span class="price">S/ 10.00</span>
+                                <span class="btn-detail">Ver Detalle <i class="fas fa-sync-alt"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card-back" style="background-image: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600');">
+                        <div class="back-content">
+                            <h3>Detalle del Chef</h3>
+                            <p>Una base cremosa de papa con infusión de ají amarillo puro, coronada con láminas de pescado marinado en una salsa acevichada secreta de la casa.</p>
+                            <span class="price-back">S/ 10.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card-img-placeholder">🔥</div>
+                        <div class="card-body">
+                            <h3>Dúo Marino Imbatible</h3>
+                            <p>La combinación perfecta: una porción de ceviche junto a nuestra causa tradicional.</p>
+                            <div class="card-footer-front">
+                                <span class="price">S/ 12.00</span>
+                                <span class="btn-detail">Ver Detalle <i class="fas fa-sync-alt"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card-back" style="background-image: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url('https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=600');">
+                        <div class="back-content">
+                            <h3>Detalle del Chef</h3>
+                            <p>El matrimonio perfecto del mar y la tierra. Servimos media porción de nuestro ceviche carretillero acompañado de una contundente causa de la casa.</p>
+                            <span class="price-back">S/ 12.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="motivation-phrase">"Con pasión en la cocina y el corazón en cada plato, construimos el éxito bocado a bocado."</p>
+            <p class="copyright">&copy; 2026 CevicheriaElWawita. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="whatsapp-wrapper">
+        <a href="https://wa.me/51123456789?text=¡Hola!%20Me%20gustaría%20hacer%20un%20pedido%20a%20delivery." class="whatsapp-btn" target="_blank" aria-label="Contacto por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <div class="pulse-wave"></div>
+        <div class="pulse-wave wave-2"></div>
+    </div>
+
+</body>
+</html>
